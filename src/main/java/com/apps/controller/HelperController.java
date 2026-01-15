@@ -24,7 +24,6 @@ public class HelperController {
         ResponseEntity<ApiResponse> response = helperService.sendMessage(message);
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.TEXT_PLAIN);
-
         return new ResponseEntity<ApiResponse>(response.getBody(), headers, HttpStatus.OK);
     }
 
