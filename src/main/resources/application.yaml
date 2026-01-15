@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: helper-service
+  profiles:
+    active: local
+
