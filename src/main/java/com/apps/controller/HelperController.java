@@ -23,7 +23,7 @@ public class HelperController {
     public ResponseEntity<ApiResponse> publish(@RequestBody String message) {
         ResponseEntity<ApiResponse> response = helperService.sendMessage(message);
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.TEXT_PLAIN);
+        headers.setContentType(MediaType.APPLICATION_JSON);
         return new ResponseEntity<ApiResponse>(response.getBody(), headers, HttpStatus.OK);
     }
 
